@@ -1,0 +1,154 @@
+/*********** Reset CSS ***********/
+:root {
+  --main-font: sans-serif;
+  --font-size: 16px;
+  --main-color: #f7df13;
+  --second-color: #222;
+  --main-modal-color: rgba(247, 222, 30, 0.85);
+  --second-modal-color: rgba(34, 34, 34, 0.85);
+  --container-width: 1200px;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+header h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.panel {
+  /* background-color: var(--second-modal-color);
+  bottom: 10%;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  padding-top: 4rem;
+  position: fixed;
+  right: 10%;
+  top: 0;
+  transform: translate(100%, 100%);
+  transition: all 0.5s ease;
+  width: 100%;
+  z-index: 998; */
+  background-color: var(--second-modal-color);
+  bottom: 1vh;
+  height: 4rem;
+  overflow: hidden;
+  padding-top: 4rem;
+  position: fixed;
+  right: 1vw;
+  transition: all 0.5s ease;
+  visibility: hidden;
+  width: 4rem;
+  z-index: 998;
+}
+
+.panel.is-active {
+  /* opacity: 1;
+  transform: translate(0, 0); */
+  bottom: 0;
+  height: 100%;
+  right: 0;
+  visibility: visible;
+  width: 100%;
+}
+
+.panel-btn {
+  align-items: center;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  bottom: 1vh;
+  display: flex;
+  height: 4rem;
+  justify-content: center;
+  padding: 0;
+  position: fixed;
+  right: 1vw;
+  width: 4rem;
+  z-index: 999;
+}
+
+.panel-btn:focus {
+  outline: none;
+}
+
+.menu {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: inherit;
+}
+
+.menu a {
+  color: var(--main-color);
+  display: block;
+  font-size: 1.5rem;
+  padding: 3rem 2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: inherit;
+}
+
+.menu a:hover {
+  background-color: var(--main-modal-color);
+  color: var(--second-color);
+  font-weight: bold;
+}
+
+.section {
+  margin: 0 auto;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  padding: 4rem 2rem 2rem 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.canvas {
+  background-color: var(--second-color);
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  width: 900px;
+}
+
+.character {
+  background-color: var(--main-color);
+  border-radius: 50%;
+  height: 60px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
