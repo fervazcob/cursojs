@@ -137,9 +137,9 @@ header h1 {
 
 .canvas {
   background-color: var(--second-color);
+  display: flex;
   height: 300px;
   margin: 0 auto;
-  position: relative;
   width: 900px;
 }
 
@@ -147,8 +147,6 @@ header h1 {
   background-color: var(--main-color);
   border-radius: 50%;
   height: 60px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
+  margin: auto;
   width: 60px;
 }

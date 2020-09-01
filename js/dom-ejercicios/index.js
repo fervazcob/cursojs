@@ -1,6 +1,6 @@
 import hamburgerMenu from "./menu_hamburquesa.js";
 import { clock, alarm } from "./clock.js";
-import { keyboard } from "./keyboard.js";
+import { shortcut, keyboard } from "./keyboard.js";
 
 const d = document;
 
@@ -11,5 +11,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
   alarm("#start-alarm", "#stop-alarm", "assets/sounds/alarm.mp3");
 
-  keyboard("#canvas", "#character");
+});
+
+d.addEventListener("keydown", e => {
+  shortcut(e);
+  keyboard(e, "#canvas", "#character");
 });
