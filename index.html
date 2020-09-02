@@ -1,63 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios del DOM</title>
+    <link rel="stylesheet" href="./css/hamburgers.min.css" type="text/css" />
+    <link rel="stylesheet" href="./css/dom_ejercicios.css" type="text/css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ejercicios del DOM</title>
-  <link rel="stylesheet" href="./css/hamburgers.min.css" type="text/css" />
-  <link rel="stylesheet" href="./css/dom_ejercicios.css" type="text/css" />
-</head>
+  <body>
+    <header>
+      <h1>Ejercicios del DOM</h1>
+    </header>
 
-<body>
-  <header>
-    <h1>Ejercicios del DOM</h1>
-  </header>
+    <button class="hamburger hamburger--vortex panel-btn" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
 
-  <button class="hamburger hamburger--vortex panel-btn" type="button">
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-  </button>
+    <aside class="panel">
+      <nav class="menu">
+        <a href="#section1">Reloj digital y Alarma sonora</a>
+        <a href="#section2">Eventos del Teclado</a>
+        <a href="#section3">Cuenta regresiva</a>
+        <a href="#section4">Sección 4</a>
+        <a href="#section5">Sección 5</a>
+      </nav>
+    </aside>
 
-  <aside class="panel">
-    <nav class="menu">
-      <a href="#section1">Reloj digital y Alarma sonora</a>
-      <a href="#section2">Eventos del Teclado</a>
-      <a href="#section3">Cuenta regresiva</a>
-      <a href="#section4">Sección 4</a>
-      <a href="#section5">Sección 5</a>
-    </nav>
-  </aside>
+    <main>
+      <section id="section1" class="section">
+        <h2>Reloj digital y Alarma sonora</h2>
+        <div id="reloj"></div>
+        <button id="start-clock">Iniciar Reloj</button>
+        <button id="stop-clock">Detener Reloj</button>
+        <button id="start-alarm">Iniciar Alarma</button>
+        <button id="stop-alarm">Detener Alarma</button>
+      </section>
 
-  <main>
-    <section id="section1" class="section">
-      <h2>Reloj digital y Alarma sonora</h2>
-      <div id="reloj"></div>
-      <button id="start-clock">Iniciar Reloj</button>
-      <button id="stop-clock">Detener Reloj</button>
-      <button id="start-alarm">Iniciar Alarma</button>
-      <button id="stop-alarm">Detener Alarma</button>
-    </section>
-    <section id="section2" class="section">
-      <h2>Eventos del Teclado</h2>
-      <div id="canvas" class="canvas">
-        <div id="character" class="character"></div>
-      </div>
-    </section>
-    <section id="section3" class="section">
-      <h2>Cuenta regresiva</h2>
-      <h3 class="countdown"></h3>
-    </section>
-    <section id="section4" class="section">
-      <h2>Sección 4</h2>
-    </section>
-    <section id="section5" class="section">
-      <h2>Sección 5</h2>
-    </section>
-  </main>
+      <section id="section2" class="section">
+        <h2>Eventos del Teclado</h2>
+        <div id="canvas" class="canvas">
+          <div id="character" class="character"></div>
+        </div>
+      </section>
 
-  <script src="./js/dom-ejercicios/index.js" type="module"></script>
-</body>
+      <section id="section3" class="section">
+        <h2>Cuenta regresiva</h2>
+        <h3 class="countdown"></h3>
+      </section>
 
+      <section id="section4" class="section">
+        <h2>Sección 4</h2>
+      </section>
+
+      <section id="section5" class="section">
+        <h2>Sección 5</h2>
+      </section>
+    </main>
+
+    <button class="scroll-top-btn hidden" type="button">&#11014;</</button>
+
+    <script src="./js/dom-ejercicios/index.js" type="module"></script>
+  </body>
 </html>
