@@ -3,7 +3,7 @@ import { clock, alarm } from "./clock.js";
 import { shortcut, keyboard } from "./keyboard.js";
 import { countdown } from "./countdown.js";
 import { scroll } from "./scroll.js";
-import { darkMode } from "./dark_mode.js";
+import { darkMode, activeDarkTheme } from "./dark_mode.js";
 
 const d = document;
 
@@ -19,6 +19,12 @@ d.addEventListener("DOMContentLoaded", (e) => {
   scroll(".scroll-top-btn");
 
   darkMode(".dark-btn", "dark-theme");
+
+  activeDarkTheme({
+    btn: ".dark-btn",
+    classDark: "dark-theme",
+    isChanged: false,
+  });
 });
 
 d.addEventListener("keydown", (e) => {
