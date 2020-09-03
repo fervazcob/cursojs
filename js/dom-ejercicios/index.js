@@ -3,6 +3,7 @@ import { clock, alarm } from "./clock.js";
 import { shortcut, keyboard } from "./keyboard.js";
 import { countdown } from "./countdown.js";
 import { scroll } from "./scroll.js";
+import { darkMode } from "./dark_mode.js";
 
 const d = document;
 
@@ -16,6 +17,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
   countdown(".countdown", new Date("Sep 20 2021 20:00:00"), "Feliz cumpleaños");
 
   scroll(".scroll-top-btn");
+
+  darkMode(".dark-btn", "dark-theme");
 });
 
 d.addEventListener("keydown", (e) => {
