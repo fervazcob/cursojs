@@ -23,7 +23,6 @@ d.addEventListener("DOMContentLoaded", (e) => {
   activeDarkTheme({
     btn: ".dark-btn",
     classDark: "dark-theme",
-    isChanged: false,
   });
 });
 

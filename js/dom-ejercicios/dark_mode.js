@@ -6,11 +6,7 @@ const d = document,
 export function darkMode(btn, classDark) {
   d.addEventListener("click", (e) => {
     if (e.target.matches(btn)) {
-      activeDarkTheme({
-        btn: btn,
-        classDark: classDark,
-        isChanged: true,
-      });
+      activeDarkTheme({ btn, classDark, isChanged: true });
     }
   });
 }
@@ -21,24 +17,17 @@ export function activeDarkTheme({ btn, classDark, isChanged = false }) {
 
   let isActive = JSON.parse(ls.getItem("dark-theme"));
 
-  if (ls.getItem("dark-theme") === null) {
-    ls.setItem("dark-theme", false);
-  }
+  if (ls.getItem("dark-theme") === null) ls.setItem("dark-theme", false);
 
-  if (isChanged) {
-    ls.setItem("dark-theme", !isActive);
-    isActive = !isActive;
-  }
+  if (isChanged) ls.setItem("dark-theme", !isActive);
+
+  isActive = isChanged ? !isActive : isActive;
 
   $btnDark.textContent = isActive ? sun : moon;
 
   if (isActive) {
-    $selectors.forEach((el) => {
-      el.classList.add(classDark);
-    });
+    $selectors.forEach((el) => el.classList.add(classDark));
   } else {
-    $selectors.forEach((el) => {
-      el.classList.remove(classDark);
-    });
+    $selectors.forEach((el) => el.classList.remove(classDark));
   }
 }
