@@ -5,6 +5,7 @@ import { countdown } from "./countdown.js";
 import { scroll } from "./scroll.js";
 import { darkMode, activeDarkTheme } from "./dark_mode.js";
 import { responsiveMedia } from "./responsive.js";
+import { tester } from "./tester.js";
 
 const d = document;
 
@@ -43,6 +44,13 @@ d.addEventListener("DOMContentLoaded", (e) => {
       width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
       tabindex="0"></iframe>`
   );
+
+  tester("#responsive-test", "#close", {
+    url: "#url",
+    width: "#width",
+    height: "#height",
+    desc: `Teste en www.google.com.mx`,
+  });
 });
 
 d.addEventListener("keydown", (e) => {
