@@ -26,7 +26,7 @@
         <a href="#section3">Cuenta regresiva</a>
         <a href="#section4">Responsive Design</a>
         <a href="#section5">Responsive Tester</a>
-        <a href="#section6">Sección 6</a>
+        <a href="#section6">Detección de dispositivos (UserAgent)</a>
         <a href="#section7">Sección 7</a>
         <a href="#section8">Sección 8</a>
         <a href="#section9">Sección 9</a>
@@ -70,26 +70,27 @@
 
         <form id="responsive-test">
           <div>
-            <label for="url">URL</label>
-            <input type="text" name="url" id="url">
+            <!-- <label for="url">URL</label> -->
+            <input type="url" name="url" id="url" placeholder="URL" required>
           </div>
           <div>
-            <label for="width">Ancho</label>
-            <input type="text" name="width" id="width">
+            <!-- <label for="width">Ancho</label> -->
+            <input type="text" name="width" id="width" placeholder="Ancho" required>
           </div>
           <div>
-            <label for="height">Alto</label>
-            <input type="text" name="height" id="height">
-          </div>
+            <!-- <label for="height">Alto</label> -->
+            <input type="text" name="height" id="height" placeholder="Alto" rrequired>
+          </div> 
           <div>
-            <input type="submit" id="test" value="Test">
-            <input type="submit" id="close" value="Cerrar">
+            <input name="test" type="submit" id="test" value="Test">
+            <input name="close" type="button" id="close" value="Cerrar">
           </div>
         </form>
       </section>
 
       <section id="section6" class="section">
-        <h2>Sección 6</h2>
+        <h2>Detección de dispositivos (UserAgent)</h2>
+        <div class="user-device"></div>
       </section>
 
       <section id="section7" class="section">

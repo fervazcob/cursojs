@@ -45,12 +45,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
       tabindex="0"></iframe>`
   );
 
-  tester("#responsive-test", "#close", {
-    url: "#url",
-    width: "#width",
-    height: "#height",
-    desc: `Teste en www.google.com.mx`,
-  });
+  tester("#responsive-test");
 });
 
 d.addEventListener("keydown", (e) => {
