@@ -6,6 +6,7 @@ import { scroll } from "./scroll.js";
 import { darkMode, activeDarkTheme } from "./dark_mode.js";
 import { responsiveMedia } from "./responsive.js";
 import { tester } from "./tester.js";
+import { userAgent } from "./user_agent.js";
 
 const d = document;
 
@@ -46,6 +47,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
   );
 
   tester("#responsive-test");
+
+  userAgent("#user-device");
 });
 
 d.addEventListener("keydown", (e) => {
