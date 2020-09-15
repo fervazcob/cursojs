@@ -213,7 +213,7 @@ header h1 {
 /* Network Status */
 
 .network-notification {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   padding: 1rem;
@@ -221,6 +221,7 @@ header h1 {
   font-weight: bold;
   text-align: center;
   color: white;
+  width: 35%;
 }
 
 .online {

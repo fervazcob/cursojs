@@ -7,6 +7,7 @@ import { darkMode, activeDarkTheme } from "./dark_mode.js";
 import { responsiveMedia } from "./responsive.js";
 import { tester } from "./tester.js";
 import { userAgent } from "./user_agent.js";
+import { statusNetwork } from "./statusNetwork.js";
 
 const d = document;
 
@@ -55,3 +56,5 @@ d.addEventListener("keydown", (e) => {
   shortcut(e);
   keyboard(e, "#canvas", "#character");
 });
+
+statusNetwork();
