@@ -8,6 +8,7 @@ import { responsiveMedia } from "./responsive.js";
 import { tester } from "./tester.js";
 import { userAgent } from "./user_agent.js";
 import { statusNetwork } from "./statusNetwork.js";
+import { webcam } from "./webcam.js";
 
 const d = document;
 
@@ -50,6 +51,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
   tester("#responsive-test");
 
   userAgent("#user-device");
+
+  webcam("webcam");
 });
 
 d.addEventListener("keydown", (e) => {
